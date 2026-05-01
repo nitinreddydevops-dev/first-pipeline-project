@@ -12,7 +12,7 @@ pipeline{
         sh "echo buildnumber is ${BUILD_NUMBER}"
         sh "echo workspace is ${WORKSPACE}"
         sh "echo job name is ${JOB_NAME}"
-        sh "echo git commit is ${GIT_COMMMIT}"
+        sh "echo git commit is ${GIT_COMMIT}"
       }
     }
     stage("run hello message"){
