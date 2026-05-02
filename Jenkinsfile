@@ -38,7 +38,7 @@ pipeline{
     }
     stage('pushed built image to dockerhub'){
       steps{
-        sh 'docker push nitinreddy8/$APP_NAME:BUILD_NUMBER'
+        sh 'docker push nitinreddy8/$APP_NAME:$BUILD_NUMBER'
       }
     }
 }
