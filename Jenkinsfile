@@ -15,7 +15,7 @@ pipeline{
     }
     stage("login to docker hub"){
       steps{
-        sh "docker login -u ${DOCKERHUB_USR}  -p ${DOCKERHUB_PSW} "
+        sh 'docker login -u ${DOCKERHUB_USR}  -p ${DOCKERHUB_PSW} '
       }
     }
     stage("just echoing build number, job name, workspace, got commit message"){
