@@ -2,13 +2,20 @@ pipeline{
   agent any
   environment{
     APP_NAME = "jenkins-pipeline-app-example"
-    OWNER = "nitn"
+    OWNER = "Nitn Reddy"
+    DOCKERHUB = credentials("dockerhub_creds")
+    
   }
 
   stages{
     stage("pull the latest code"){
       steps{
         echo "the latest code has been pulled"
+      }
+    }
+    stage("login to docker hub"){
+      steps{
+        sh "docker login -u ${DOCKERHUB_USR}  -p ${DOCKERHUB_PSW} "
       }
     }
     stage("just echoing build number, job name, workspace, got commit message"){
