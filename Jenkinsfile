@@ -16,8 +16,9 @@ pipeline{
         sh "echo buildnumber is ${BUILD_NUMBER}"
         sh "echo workspace is ${WORKSPACE}"
         sh "echo job name is ${JOB_NAME}"
-        sh "echo git commit is ${GIT_COMMIT}"
+        sh "echo git commit is ${GIT_COMMIT}"   
       }
+    }
      stage("show custom env"){
        steps{
          sh "echo app name is ${APP_NAME}, built by ${OWNER}"
