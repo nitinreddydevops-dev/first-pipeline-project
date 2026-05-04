@@ -41,5 +41,11 @@ pipeline{
         sh 'docker push nitinreddy8/$APP_NAME:$BUILD_NUMBER'
       }
     }
+    stage('Continous Deployment'){
+      steps{
+        sh 'docker stop myapp' || true
+        sh 'docker rm myapp' || true
+        sh 'docker run -d --name myapp -p 5000:5000 nitinreddy8/$APP_NAME:$BUILD_NUMBER'
+}
 }
 }
