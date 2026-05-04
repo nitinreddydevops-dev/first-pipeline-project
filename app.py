@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return f"Hello from Nitin's CI/CD pipeline! 🚀\nBuild served from container.\n"
+    return f"Hello from Nitin's CI/CD CI pipeline! \n Build served from container.\n"
 
 @app.route('/health')
 def health():
